@@ -1,0 +1,162 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main{
+    text-align: center;
+    justify-content: center;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 250px 1400px 1fr;
+    height: 100vh;
+}
+
+.menu ul{
+    gap: 20px;
+    list-style-type: none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.menu a:hover{
+    color: brown;
+    font-weight: bold;
+}
+
+.artigos{
+    display: flex;
+    gap: 10px;
+}
+
+.artigos img{
+    width: 100%;
+    height: 45%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.artigos p{
+    padding: 10px;
+}
+
+.titulo-artigo{
+    font-size: 20px;
+    color: brown;
+}
+
+.titulo-artigo p{
+    font-weight: bold;
+
+}
+
+.artigo button{
+    width: 100%;
+    color: brown ;
+    padding: 5px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.artigo button:hover{
+    box-shadow: 0px 0px 5px brown;
+}
+
+.botao-artigo{
+    padding: 10px;
+}
+
+.artigo{
+    margin-bottom: 10px;
+    width: 30%;
+    height: 50%;
+    background-color: #ffc8c875;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+/*SLIDE BAR ESQUERDA*/
+
+.slidebar{
+    border-right: 1px solid black;
+    margin-right: 10px;
+}
+
+.menu, .posts-recentes{
+    padding: 20px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu li{
+    margin-bottom: 5px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover{
+    color: brown;
+    font-weight: bold;
+}
+
+/* SLIDE BAR DIREITA */
+
+.links{
+    border-left: 1px solid black;
+    margin-left: 10px;
+}
+
+.direita{
+    padding: 20px;
+}
+
+.direita ul{
+    list-style-type: none;
+}
+
+.direita li{
+    margin-bottom: 5px;
+}
+
+.direita a{
+    text-decoration: none;
+    color: black;
+}
+
+.direita a:hover{
+    color: brown;
+    font-weight: bold;
+}
+
+@media (max-width: 750px) {
+
+    .grid{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        height: 100vh;
+    }
+
+
+    .artigo{
+        margin-bottom: 10px;
+        width: 90%;
+        height: 50%;
+        background-color: #ffc8c875;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .artigos{
+        flex-wrap: wrap;
+    }
+
+}

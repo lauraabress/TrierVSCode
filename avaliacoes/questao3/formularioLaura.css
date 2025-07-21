@@ -1,0 +1,44 @@
+body{
+    justify-items: center;
+}
+
+main{
+    justify-items: center;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(248, 248, 248);
+    padding: 3%;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px black;
+}
+
+main h3{
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.campo{
+    margin-bottom: 10px;
+}
+
+form{
+    text-align: justify;
+}
+
+input:focus{
+    background-color: rgb(206, 229, 250);
+}
+
+.botao button{
+    margin-top: 20px;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.botao button:hover{
+    background-color: rgb(206, 229, 250);
+    box-shadow: 0px 0px 3px black;
+}

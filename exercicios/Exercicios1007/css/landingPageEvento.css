@@ -1,0 +1,144 @@
+header{
+    background-image: url("https://i.pinimg.com/736x/30/d4/63/30d463314591f0fb99dc9d84be436181.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}       
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: fantasy;
+    font-size: 100px;
+}
+
+.titulo p{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+p{
+    color: white;
+}
+
+body{
+    background-color: rgb(24, 23, 23);
+}
+
+.descricao{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    align-items: center;
+    text-indent: 25px;
+    text-align: justify;
+    margin-left: 10px;
+    gap: 50px;
+    flex-wrap: wrap; 
+}
+
+.descricao img{
+    width: 40%;
+    min-width: 40%;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 50px;
+}
+
+.texto-descricao{
+    width: 50%;
+}
+
+h3{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 10px;
+    width: 7px;
+}
+
+.palestras{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.palestra{
+    background-color: blueviolet;
+    border-radius: 10px;
+    width: 300px  !important
+    
+}
+
+.palestra:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);}
+
+.palestra p{
+    
+    margin: 15px;
+}
+
+.titulo-palestra{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    width: 100%;
+}
+
+.infos p{
+    color: blueviolet;
+}
+
+.final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.final button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 200%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: blueviolet;
+    color: white;
+}
+
+button:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+footer{
+    margin-top: 40px;
+    background-color: blueviolet;
+}
+
+footer img{
+    height: 20px;
+}
+
+.rede-social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rede-social h2 {
+    color: white;
+}

@@ -1,0 +1,44 @@
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(172, 238, 238);
+    border-radius: 30px;
+    padding: 3%;
+}
+
+button:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(172, 206, 206);
+}
+
+input, textarea, select{
+    width: 100%;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao_enviar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border-radius: 15px;
+    padding: 1% 5%;
+}

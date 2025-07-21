@@ -1,0 +1,15 @@
+
+.text-center img{
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.botoes button{
+    margin: 10px 30px 30px 30px;
+}
+
+.col-12{
+    text-align: justify;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,40 @@
+header{
+    color: blueviolet;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 5%;
+    font-weight: bold; /* negrito */
+}
+
+form{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blueviolet;
+    border-radius: 30px;
+    padding: 3% 1%;
+    width: 30%;
+}
+
+
+input, select, textarea{
+    margin-bottom: 5%;
+    border-radius: 8px;
+    width: 70%;
+    padding: 5px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button:hover{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet
+}
+
+

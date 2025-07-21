@@ -1,0 +1,18 @@
+.text-center h2{
+    margin: 3%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mb-3 label{
+    background-color: rgba(186, 230, 247, 0.445);
+    border: none;
+    border-radius: 0%;
+}
+
+.mb-3 input{
+    border-radius: 0%;
+}
+
+.mb-3 textarea{
+    border-radius: 0%;
+}

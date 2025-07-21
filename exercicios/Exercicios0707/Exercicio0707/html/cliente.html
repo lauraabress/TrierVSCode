@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cliente.css">
+    <title>Projeto Prático</title>
+
+</head>
+<body>
+    <header>
+        Formulário
+    </header>
+    <main>
+
+        <form>  
+            <label for="nome">Nome completo: </label>
+            <input id="nome" type="text" required placeholder="Nome completo">
+    
+            <label for="email">Email: </label>
+            <input id="email" type="email" name="email" required placeholder="exemplo@email.com">
+    
+            <label for="cpf"> CPF: </label>
+            <input id="cpf" placeholder="000.000.000-00" />
+    
+            <label for="telefone"> Telefone: </label>
+            <input id="telefone" type="number" pattern="\d{3}\.\d{3}\.\d{3}\-\d{2}\." placeholder="(00)00000-0000" />
+    
+            <label for="datadenascimento">Data de Nascimento: </label>
+            <input id="datadenascimento" type="date">
+    
+            <label for="sexo">Sexo: </label>
+             <select id="sexo"name="sexo">
+                <option value="">Escolha</option>
+                <option value="">Feminino</option>
+                <option value="">Masculino</option>
+                <option value="">Outro</option>
+            </select>
+    
+            <label for="observacoes"> Observações: </label>
+            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Digite uma mensagem..."></textarea>
+    
+            <button>Enviar</button>
+    
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+</head>
+
+<body>
+    <form>
+
+        <label for="cpf"> CPF: </label>
+        <input id="cpf" type="text" pattern="\d{3}\.\d{3}\.\d{3}\-\d{2}\." placeholder="000.000.000-00" />
+
+        <label for="email"> Email: </label>
+        <input id="email" type="email" name="email" required placeholder="exemplo@email.com" />
+
+        <label for="cep"> CEP: </label>
+        <input id="cep" type="text" name="cep" placeholder="Digite um CEP válido">
+
+        <label for="estado"> Estado: </label>
+        <select id="estado"name="estado" required>
+            <option value="">Escolha</option>
+            <option value="">AL</option>
+            <option value="">SC</option>
+            <option value="">RO</option>
+            <option value="">PR</option>
+            <option value="">AC</option>
+        </select>
+
+        <label for="mensagem"> Mensagem: </label>
+        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Digite uma mensagem..."></textarea>
+        <br>
+        <br>
+            <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

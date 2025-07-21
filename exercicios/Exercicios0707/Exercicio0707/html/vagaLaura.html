@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/vagaLaura.css">
+    <title>Trabalhe Conosco</title>
+</head>
+
+<body>
+    <header>
+        <p>Trabalhe Conosco</p>
+    </header>
+    <main>
+        <form>
+            <div>
+                <label for="nome">Nome completo: </label>
+                <input id="nome" type="text" required placeholder="Nome completo">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" type="email" name="email" required placeholder="exemplo@email.com">
+            </div>
+            <div>
+                <label for="area_interesse">Área de Interesse: </label>
+                <select id="area_interesse" name="area_interesse" required>
+                    <option value="">Escolha</option>
+                    <option value="">Desenvolvimento</option>
+                    <option value="">Design</option>
+                    <option value="">Suporte</option>
+                    <option value="">Comercial</option>
+                </select>
+            </div>
+            <div>
+                <label for="nivel_experiencia">Nível de Experiência: </label>
+                <select id="nivel_experiencia" name="nivel_experiencia">
+                    <option value="">Escolha</option>
+                    <option value="">Júnior</option>
+                    <option value="">Pleno</option>
+                    <option value="">Sênior</option>
+                </select>
+            </div>
+            <div>
+                <label for="link_curriculo">Link Currículo: </label>
+                <input id="link_curriculo" type="text" required placeholder="URL, ex: do google Drive">
+            </div>
+            <div>
+                <label for="disponibilidade_horario">Disponibilidade de Horário: </label>
+                <select id="disponibilidade_horario" name="disponibilidade_horario">
+                    <option value="">Escolha</option>
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+            </div>
+            <div>
+                <label for="carta_apresentacao">Carta de Apresentação: </label>
+                <textarea id="carta_apresentacao" name="carta_apresentacao" rows="3"
+                    placeholder="Digite sua carta de apresentação"></textarea>
+            </div>
+
+            <div class="botao_enviar">
+                <button>Enviar</button>
+            </div>
+
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>

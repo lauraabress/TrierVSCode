@@ -1,0 +1,52 @@
+h1{
+    color: lch(48.35% 106.1 313.46);
+    text-align: center;
+}
+
+body{
+    background-color: lch(86.92% 18.97 310.7);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: lch(48.35% 106.1 313.46);
+    padding: 2%;
+    margin: 1% 1% 1% 1%;
+    border-radius: 10px;
+
+}
+
+a{
+    color: aliceblue;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.texto{
+  background-color: lch(82.29% 29.81 311.04);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 300px;
+  margin-left: 30%;
+}
+
+img{
+    border: 3px solid lch(48.35% 106.1 313.46);
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

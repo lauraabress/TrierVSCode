@@ -1,0 +1,29 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px;
+    background-color: #f4f4f4a2;
+}
+
+h2, h3{
+    color: #333;
+}
+
+form{
+    margin-bottom: 20px;
+}
+
+input{
+    margin: 5px;
+    padding: 8px;
+}
+
+button{
+    padding: 8px 12px;
+}         
+
+.funcionario{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

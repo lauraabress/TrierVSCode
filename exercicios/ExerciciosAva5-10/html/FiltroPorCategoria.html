@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produtos com Filtro por Categoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/FiltroPorCategoria.css">
+</head>
+
+<body>
+    <header id="titulo" class="text-center">
+        <h2>Loja da Laura</h2>
+    </header>
+    <hr>
+    <main>
+        <div class="container text-center">
+            <p id="text-filtrar">Filtrar por:</p>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" onclick="todos()" for="btnradio1">Todos</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" onclick="livros()" for="btnradio2">Livros</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" onclick="roupas()" for="btnradio3">Roupas</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-primary" onclick="comidas()" for="btnradio4">Comidas</label>
+            </div>
+            <h3 id="text-produtos">Produtos</h3>
+            <div class="row">
+                <div class="col">
+                    <div class="livro">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://cdn2.hubspot.net/hubfs/6006019/Imported_Blog_Media/15-livros-incriveis-para-todo-estudante-ler.jpeg"
+                                class="card-img-top" alt="img-livro">
+                            <div class="card-body">
+                                <h5 class="card-title">Livro Misterioso</h5>
+                                <p class="card-text">Um livro misterioso chegará até sua casa. Não aceitamos devolução.
+                                </p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="roupa">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://blog.damyller.com.br/wp-content/uploads/2024/09/Look-elegante-com-calca-jeans-e-camisa-branca.webp"
+                                class="card-img-top" alt="img-roupa-chique">
+                            <div class="card-body">
+                                <h5 class="card-title">Roupa Chique</h5>
+                                <p class="card-text">Bora ser chique</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="comida">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://tuacasa.uol.com.br/wp-content/uploads/2025/07/morango-do-amor-00-1.png"
+                                class="card-img-top" alt="-img-morango-do-amor">
+                            <div class="card-body">
+                                <h5 class="card-title">Morango do Amor</h5>
+                                <p class="card-text">Feito de morangos, com amor</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="livro">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://gpeinc.com.br/wp-content/uploads/2022/05/livros-na-decoracao.png"
+                                class="card-img-top" alt="img-livro">
+                            <div class="card-body">
+                                <h5 class="card-title">Árvore de Livros</h5>
+                                <p class="card-text">Uma bela árvore para por seus livros</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="roupa">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://www.mormaii.com.br/site/wp-content/uploads/2019/02/mormaii-aguas-abertas-natacao-2.jpg"
+                                class="card-img-top" alt="img-roupa-banho">
+                            <div class="card-body">
+                                <h5 class="card-title">Roupa de Banho</h5>
+                                <p class="card-text">Várias roupas de banho - diversos tamanhos disponíveis</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="comida">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://www.minhareceita.com.br/app/uploads/2022/12/pizza-de-pepperoni-caseira-portal-minha-receita.jpg"
+                                class="card-img-top" alt="img-pizza">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza</h5>
+                                <p class="card-text">Quentinha e saborosa - diversos sabores disponíveis</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+</body>
+
+<script src="../js/FiltroPorCategoria.js"></script>
+
+</html>

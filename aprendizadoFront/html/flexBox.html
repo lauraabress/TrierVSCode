@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Flexbox</title>
+    <style>
+      .flex-demo {
+        display: flex;
+        background-color: #e0e0e0;
+        padding: 10px;
+        margin-top: 10px;
+        gap: 10px;
+      }
+
+      .item {
+        background-color: #3f51b5;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+      }
+
+      .jc-center {
+        justify-content: center;
+      }
+
+      .jc-between {
+        justify-content: space-between;
+      }
+
+      .ai-center {
+        align-items: center;
+        height: 100px;
+      }
+
+      .ai-end {
+        align-items: flex-end;
+        height: 100px;
+      }
+
+      .fd-column {
+        flex-direction: column;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">display: flex</div>
+          <div class="body-card">
+            Ativa o modo flexbox no container.
+            <div class="flex-demo">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">justify-content</div>
+          <div class="body-card">
+            Alinha os itens no eixo principal.
+            <code>justify-content: center;</code>
+            <div class="flex-demo jc-center">
+              <div class="item">A</div>
+              <div class="item">B</div>
+            </div>
+            <code>justify-content: space-between;</code>
+            <div class="flex-demo jc-between">
+              <div class="item">A</div>
+              <div class="item">B</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">align-items</div>
+          <div class="body-card">
+            Alinha os itens no eixo cruzado (vertical).
+            <code>align-items: center;</code>
+            <div class="flex-demo ai-center">
+              <div class="item">Alto</div>
+              <div class="item">Meio</div>
+            </div>
+            <code>align-items: flex-end;</code>
+            <div class="flex-demo ai-end">
+              <div class="item">Baixo</div>
+              <div class="item">Fim</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">flex-direction</div>
+          <div class="body-card">
+            Define a direção dos itens.
+            <code>flex-direction: row;</code> (padrão)
+            <div class="flex-demo">
+              <div class="item">A</div>
+              <div class="item">B</div>
+            </div>
+            <code>flex-direction: column;</code>
+            <div class="flex-demo fd-column">
+              <div class="item">A</div>
+              <div class="item">B</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

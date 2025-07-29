@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Flex Wrap e Gap</title>
+    <style>
+      .exemplo-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .exemplo-box {
+        background-color: #d1e7dd;
+        border: 1px solid #0f5132;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+      }
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .nowrap {
+        flex-wrap: nowrap;
+      }
+      .wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <!-- Card: flex-wrap -->
+        <div class="card">
+          <div class="header-card">flex-wrap</div>
+          <div class="body-card">
+            Controla se os itens devem ou não quebrar para outra linha.<br /><br />
+            <strong>Exemplo:</strong>
+            <pre><code>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+            </code></pre>
+            <div class="exemplo-container wrap">
+              <div class="exemplo-box">1</div>
+              <div class="exemplo-box">2</div>
+              <div class="exemplo-box">3</div>
+              <div class="exemplo-box">4</div>
+              <div class="exemplo-box">5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: flex-wrap: nowrap -->
+        <div class="card">
+          <div class="header-card">flex-wrap: nowrap</div>
+          <div class="body-card">
+            Os itens ficam em uma única linha, mesmo que transbordem.
+            <pre><code>
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+            </code></pre>
+            <div class="exemplo-container nowrap">
+              <div class="exemplo-box">1</div>
+              <div class="exemplo-box">2</div>
+              <div class="exemplo-box">3</div>
+              <div class="exemplo-box">4</div>
+              <div class="exemplo-box">5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: flex-wrap: wrap-reverse -->
+        <div class="card">
+          <div class="header-card">flex-wrap: wrap-reverse</div>
+          <div class="body-card">
+            Quebra os itens em várias linhas, mas de baixo para cima.
+            <pre><code>
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+            </code></pre>
+            <div class="exemplo-container wrap-reverse" style="height: 150px">
+              <div class="exemplo-box">1</div>
+              <div class="exemplo-box">2</div>
+              <div class="exemplo-box">3</div>
+              <div class="exemplo-box">4</div>
+              <div class="exemplo-box">5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: row-gap / column-gap -->
+        <div class="card">
+          <div class="header-card">row-gap / column-gap</div>
+          <div class="body-card">
+            Controla o espaçamento entre linhas e colunas em um container flex
+            ou grid.
+            <pre><code>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+            </code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

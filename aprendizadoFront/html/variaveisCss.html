@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Variáveis CSS</title>
+    <style>
+      :root {
+        --cor-principal: #2c3e50;
+        --texto-claro: white;
+        --destaque: #e67e22;
+      }
+
+      .exemplo-variavel {
+        background-color: var(--cor-principal);
+        color: var(--texto-claro);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+
+      .destaque {
+        color: var(--destaque);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">:root</div>
+          <div class="body-card">
+            Define variáveis globais.
+            <pre><code>:root {
+  --cor-principal: #2C3E50;
+  --texto-claro: white;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Uso com var()</div>
+          <div class="body-card">
+            Utilização das variáveis no CSS.
+            <pre><code>body {
+  background-color: var(--cor-principal);
+  color: var(--texto-claro);
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Exemplo Prático</div>
+          <div class="body-card">
+            <div class="exemplo-variavel">
+              Este bloco usa as cores da variável:
+              <span class="destaque">cor-principal</span> e
+              <span class="destaque">texto-claro</span>.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

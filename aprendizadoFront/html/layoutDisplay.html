@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Layout e Display</title>
+    <style>
+      .exemplo-layout {
+        border: 1px solid gray;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .flex-item {
+        background-color: lightcoral;
+        padding: 10px;
+        color: white;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .grid-item {
+        background-color: teal;
+        padding: 10px;
+        color: white;
+      }
+
+      .relative-box {
+        position: relative;
+        background: lightblue;
+        width: 150px;
+        height: 100px;
+      }
+
+      .absolute-box {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: darkblue;
+        color: white;
+        padding: 5px;
+      }
+
+      .zindex-container {
+        position: relative;
+        width: 150px;
+        height: 100px;
+      }
+
+      .z1,
+      .z2 {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        color: white;
+        padding: 5px;
+      }
+
+      .z1 {
+        background-color: green;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .z2 {
+        background-color: red;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">display</div>
+          <div class="body-card">
+            Define o tipo de exibição do elemento.<br />
+            <code>display: block | inline | flex | grid;</code>
+            <div class="exemplo-layout flex-container">
+              <div class="flex-item">Item 1</div>
+              <div class="flex-item">Item 2</div>
+            </div>
+            <div class="exemplo-layout grid-container">
+              <div class="grid-item">1</div>
+              <div class="grid-item">2</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">position</div>
+          <div class="body-card">
+            Define como o elemento será posicionado.<br />
+            <code
+              >position: static | relative | absolute | fixed | sticky;</code
+            >
+            <div class="relative-box">
+              Relative
+              <div class="absolute-box">Absolute</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">top, right, bottom, left</div>
+          <div class="body-card">
+            Define a posição em relação ao container pai.<br />
+            <code>top: 10px; left: 10px;</code>
+            <div class="relative-box">
+              <div class="absolute-box">Movido com top/left</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">z-index</div>
+          <div class="body-card">
+            Define a ordem de sobreposição dos elementos.<br />
+            <code>z-index: 1;</code>
+            <div class="zindex-container">
+              <div class="z1">z-index 1</div>
+              <div class="z2">z-index 2</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

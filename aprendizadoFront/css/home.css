@@ -1,0 +1,18 @@
+.title-dificulty {
+  font-size: 30px;
+}
+
+.inicio {
+  background-color: var(--background-escuro);
+  color: var(--texto-secundario);
+  min-height: 75vh;
+  width: 95%;
+  margin-top: 2%;
+  padding: 5px 0px 5px 5px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

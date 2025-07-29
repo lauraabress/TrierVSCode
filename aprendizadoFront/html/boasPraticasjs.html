@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Boas Práticas JS</title>
+    <style>
+      .exemplo {
+        border-left: 4px solid #3a86ff;
+        padding: 10px;
+        margin-top: 10px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">📝 Nomes claros</div>
+          <div class="body-card">
+            Use nomes que expressem bem o propósito.
+            <div class="exemplo">
+              // Ruim<br />
+              let x = 10;<br /><br />
+              // Bom<br />
+              let idadeUsuario = 10;
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">📏 Funções pequenas</div>
+          <div class="body-card">
+            Funções devem fazer apenas uma coisa.
+            <div class="exemplo">
+              function calcularDesconto(preco, porcentagem) {<br />
+              &nbsp;&nbsp;return preco - (preco * porcentagem / 100);<br />}
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">📂 Código separado</div>
+          <div class="body-card">
+            Mantenha o JavaScript em arquivos externos:
+            <div class="exemplo">
+              &lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">💬 Comentários úteis</div>
+          <div class="body-card">
+            Comente trechos importantes ou complexos.
+            <div class="exemplo">
+              // Calcula o valor final com desconto aplicado<br />
+              const precoFinal = calcularDesconto(100, 20);
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">🔒 const por padrão</div>
+          <div class="body-card">
+            Use <code>const</code> por padrão, só <code>let</code> se o valor
+            mudar.
+            <div class="exemplo">
+              const nome = "João";<br />
+              let idade = 25; // pode mudar
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">🌍 Evite variáveis globais</div>
+          <div class="body-card">
+            Use escopo local para evitar conflitos.
+            <div class="exemplo">
+              function saudacao() {<br />
+              &nbsp;&nbsp;let nome = "Maria";<br />
+              &nbsp;&nbsp;console.log("Olá " + nome);<br />}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

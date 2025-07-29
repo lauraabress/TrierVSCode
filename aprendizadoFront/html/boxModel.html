@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Box Model</title>
+    <style>
+      .exemplo-box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border: 2px solid blue;
+        padding: 10px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">margin</div>
+          <div class="body-card">
+            Espaço externo ao elemento.<br />
+            <code>margin: 20px;</code><br />
+            <div class="exemplo-box">margin</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">padding</div>
+          <div class="body-card">
+            Espaço interno ao elemento.<br />
+            <code>padding: 10px;</code><br />
+            <div class="exemplo-box">padding</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">border</div>
+          <div class="body-card">
+            Borda do elemento.<br />
+            <code>border: 2px solid blue;</code><br />
+            <div class="exemplo-box">border</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">width / height</div>
+          <div class="body-card">
+            Define o tamanho do elemento.<br />
+            <code>width: 100px;<br />height: 100px;</code><br />
+            <div class="exemplo-box">100x100</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

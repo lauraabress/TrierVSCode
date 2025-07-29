@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Pseudo-elementos</title>
+    <style>
+      ul.exemplo-pseudo li::before {
+        content: "• ";
+        color: red;
+      }
+
+      ul.exemplo-pseudo li::after {
+        content: ";";
+        color: green;
+      }
+
+      p.first-letter::first-letter {
+        font-size: 2rem;
+        color: blue;
+      }
+
+      ::selection {
+        background: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">::before</div>
+          <div class="body-card">
+            Adiciona conteúdo antes do elemento.<br />
+            <code>li::before { content: '• '; }</code><br />
+            <ul class="exemplo-pseudo">
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">::after</div>
+          <div class="body-card">
+            Adiciona conteúdo depois do elemento.<br />
+            <code>li::after { content: ';'; }</code><br />
+            <ul class="exemplo-pseudo">
+              <li>Exemplo</li>
+              <li>Visual</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">::first-letter</div>
+          <div class="body-card">
+            Altera a primeira letra do parágrafo.<br />
+            <code>p::first-letter { font-size: 2rem; }</code><br />
+            <p class="first-letter">Texto com primeira letra maior.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">::selection</div>
+          <div class="body-card">
+            Estiliza o texto quando é selecionado.<br />
+            <code>::selection { background: yellow; }</code><br />
+            <p>Selecione este texto para ver o efeito.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

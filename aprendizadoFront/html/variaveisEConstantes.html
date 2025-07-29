@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Variáveis e Constantes</title>
+    <style>
+      .exemplo {
+        border-left: 4px solid #00b894;
+        padding: 10px;
+        margin-top: 10px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">🔁 let</div>
+          <div class="body-card">
+            Declara uma variável cujo valor pode mudar.
+            <div class="exemplo">
+              let contador = 0;<br />
+              contador = contador + 1;
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">🔒 const</div>
+          <div class="body-card">
+            Declara um valor constante (não pode ser reatribuído).
+            <div class="exemplo">const PI = 3.14;</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">⚠️ var</div>
+          <div class="body-card">
+            Forma antiga de declarar variáveis, evite usar. Tem escopo mais
+            amplo e imprevisível.
+            <div class="exemplo">var nome = "Ana";</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

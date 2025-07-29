@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Transições e Animações</title>
+    <style>
+      .exemplo-transition {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        transition: all 0.3s ease;
+      }
+
+      .exemplo-transition:hover {
+        background: red;
+        transform: scale(1.1);
+      }
+
+      .exemplo-animation {
+        width: 50px;
+        height: 50px;
+        background: green;
+        animation: mover 2s infinite alternate;
+      }
+
+      @keyframes mover {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">transition</div>
+          <div class="body-card">
+            Cria uma transição suave entre estados.<br />
+            <code>transition: all 0.3s ease;</code><br />
+            <div class="exemplo-transition"></div>
+            Passe o mouse no quadrado azul.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">transform</div>
+          <div class="body-card">
+            Aplica efeitos como rotate, scale, etc.<br />
+            <code>transform: scale(1.1);</code><br />
+            (Já aplicado no exemplo acima.)
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">animation</div>
+          <div class="body-card">
+            Animações com keyframes.<br />
+            <code>animation: mover 2s infinite;</code><br />
+            <div class="exemplo-animation"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">@keyframes</div>
+          <div class="body-card">
+            Define os passos de uma animação.<br />
+            <code>
+              @keyframes mover {<br />
+              &nbsp;&nbsp;0% { transform: translateX(0); }<br />
+              &nbsp;&nbsp;100% { transform: translateX(100px); }<br />
+              }
+            </code>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

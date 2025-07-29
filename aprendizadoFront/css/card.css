@@ -1,0 +1,46 @@
+.header-card {
+    border-bottom: solid var(--cor-secundaria) 1px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.body-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding-block: 10px;
+    height: 100%;
+}
+
+.html,
+.css,
+.js {
+    border-left: solid var(--cor-secundaria) 1px;
+    padding-inline: 1%;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 20px;
+}
+
+li a:hover {
+    text-decoration: underline;
+    color: var(--texto-houver);
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+ul li:hover::before {
+    content: '>';
+    color: var(--cor-secundaria);
+    padding: 2px;
+}

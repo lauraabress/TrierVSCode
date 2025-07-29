@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Tags imagens e videos</title>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">&lt;img&gt;</div>
+          <div class="body-card">
+            <img src="exemplo.jpg" alt="Descrição da imagem" width="150" />
+            <p>Imagem (atributo alt obrigatório para acessibilidade).</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;figure&gt;, &lt;figcaption&gt;</div>
+          <div class="body-card">
+            <figure>
+              <img src="exemplo.jpg" alt="Exemplo de figura" width="150" />
+              <figcaption>Legenda da imagem</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;audio&gt;, &lt;video&gt;</div>
+          <div class="body-card">
+            <audio controls>
+              <source src="audio.mp3" type="audio/mpeg" />
+              Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <br />
+            <video width="320" controls>
+              <source src="video.mp4" type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;source&gt;, &lt;track&gt;</div>
+          <div class="body-card">
+            <video width="320" controls>
+              <source src="video.mp4" type="video/mp4" />
+              <source src="video.webm" type="video/webm" />
+              <track
+                src="legendas.vtt"
+                kind="subtitles"
+                srclang="pt"
+                label="Português"
+              />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;iframe&gt;</div>
+          <div class="body-card">
+            <iframe
+              width="320"
+              height="180"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

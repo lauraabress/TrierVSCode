@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Manipulação do DOM</title>
+    <style>
+      .exemplo {
+        border-left: 4px solid #0984e3;
+        padding: 10px;
+        margin-top: 10px;
+        font-family: monospace;
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">📌 Selecionar elementos</div>
+          <div class="body-card">
+            Seleciona elementos no DOM.
+            <div class="exemplo">
+              document.getElementById("id"); document.querySelector(".classe");
+              document.querySelectorAll("li");
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">✏️ Alterar conteúdo</div>
+          <div class="body-card">
+            Muda o conteúdo do elemento.
+            <div class="exemplo">
+              elemento.innerText = "Novo texto"; elemento.innerHTML =
+              "&lt;b&gt;Negrito&lt;/b&gt;";
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">⚙️ Alterar atributos</div>
+          <div class="body-card">
+            Modifica atributos HTML.
+            <div class="exemplo">elemento.setAttribute("disabled", true);</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">🎨 Manipular classes CSS</div>
+          <div class="body-card">
+            Adiciona, remove ou alterna classes.
+            <div class="exemplo">
+              elemento.classList.add("ativo");
+              elemento.classList.remove("inativo");
+              elemento.classList.toggle("mostrar");
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

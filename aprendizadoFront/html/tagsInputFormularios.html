@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">&lt;form&gt;</div>
+          <div class="body-card">
+            <form>
+              <!-- Formulário para envio de dados -->
+              Exemplo de formulário básico.
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;input&gt;</div>
+          <div class="body-card">
+            <input type="text" placeholder="Entrada de texto" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;label&gt;</div>
+          <div class="body-card">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;textarea&gt;</div>
+          <div class="body-card">
+            <textarea
+              rows="3"
+              cols="30"
+              placeholder="Campo de texto"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;button&gt;</div>
+          <div class="body-card">
+            <button type="submit">Enviar</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;select&gt;</div>
+          <div class="body-card">
+            <select>
+              <option>Opção 1</option>
+              <option>Opção 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;option&gt;, &lt;optgroup&gt;</div>
+          <div class="body-card">
+            <select>
+              <optgroup label="Grupo 1">
+                <option>Opção A</option>
+                <option>Opção B</option>
+              </optgroup>
+              <optgroup label="Grupo 2">
+                <option>Opção C</option>
+                <option>Opção D</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;fieldset&gt;, &lt;legend&gt;</div>
+          <div class="body-card">
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+              Nome: <input type="text" /><br />
+              Idade: <input type="number" />
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;datalist&gt;</div>
+          <div class="body-card">
+            <input list="opcoes" placeholder="Escolha uma opção" />
+            <datalist id="opcoes">
+              <option value="Opção 1"></option>
+              <option value="Opção 2"></option>
+              <option value="Opção 3"></option>
+            </datalist>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">&lt;output&gt;</div>
+          <div class="body-card">
+            <form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)">
+              <input type="range" id="a" name="a" value="50" /> +
+              <input type="number" id="b" name="b" value="50" /> =
+              <output name="resultado" for="a b"></output>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

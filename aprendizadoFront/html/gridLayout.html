@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Grid Layout</title>
+    <style>
+      .grid-demo {
+        display: grid;
+        background-color: #f0f0f0;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-gap {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      .place-center {
+        grid-template-columns: repeat(2, 1fr);
+        height: 150px;
+        place-items: center;
+      }
+
+      .grid-item {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">display: grid</div>
+          <div class="body-card">
+            Ativa o modelo de Grid Layout.
+            <div class="grid-demo grid-3">
+              <div class="grid-item">1</div>
+              <div class="grid-item">2</div>
+              <div class="grid-item">3</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">grid-template-columns</div>
+          <div class="body-card">
+            Define colunas no grid.
+            <code>grid-template-columns: repeat(3, 1fr);</code>
+            <div class="grid-demo grid-3">
+              <div class="grid-item">A</div>
+              <div class="grid-item">B</div>
+              <div class="grid-item">C</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">grid-gap</div>
+          <div class="body-card">
+            Espaçamento entre linhas e colunas.
+            <code>grid-gap: 20px;</code>
+            <div class="grid-demo grid-gap">
+              <div class="grid-item">X</div>
+              <div class="grid-item">Y</div>
+              <div class="grid-item">Z</div>
+              <div class="grid-item">W</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">place-items</div>
+          <div class="body-card">
+            Alinhamento dos itens no grid.
+            <code>place-items: center;</code>
+            <div class="grid-demo place-center">
+              <div class="grid-item">CENTRO</div>
+              <div class="grid-item">TAMBÉM</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+:root {
+  /* Cabeçalhos, botões principais */
+  --cor-primaria: #2c3e50;
+  /* Botões secundários, links, destaques */
+  --cor-secundaria: #18bc9c;
+  /* Texto padrão da página */
+  --texto-principal: white;
+  /* Subtítulos e textos menos importantes */
+  --texto-secundario: lightGray;
+  /* Fundo geral da página */ /* #f7f9fa // #5c748b*/
+  --background-claro: #5c748b;
+  /* Fundo de rodapé ou seções específicas */
+  --background-escuro: #1a252f;
+
+  --texto-houver: #20c7aa;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--texto-principal);
+  overflow: hidden;
+}
+
+header {
+  /*Esses 3 cods ajuda a mater a navbar no topo*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-escuro);
+}
+
+header .title-header a {
+  margin-left: 5%;
+  text-decoration: none;
+  color: var(--texto-principal);
+}
+
+main {
+  background-color: var(--background-claro);
+  margin-top: 60px;
+  height: 90vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-escuro);
+  height: 100%;
+}

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Containers no Bootstrap - Guia Completo</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Cabeçalhos, botões principais */
+        --cor-primaria: #2c3e50;
+        /* Botões secundários, links, destaques */
+        --cor-secundaria: #18bc9c;
+        /* Texto padrão da página */
+        --texto-principal: white;
+        /* Subtítulos e textos menos importantes */
+        --texto-secundario: lightGray;
+        /* Fundo geral da página */
+        --background-claro: #5c748b;
+        /* Fundo de rodapé ou seções específicas */
+        --background-escuro: #1a252f;
+
+        --texto-houver: #20c7aa;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--background-claro);
+        margin: 0;
+        padding: 20px 0;
+        color: var(--texto-principal);
+      }
+
+      .main-container {
+        background: var(--background-escuro);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+        overflow: hidden;
+      }
+
+      .header {
+        background: var(--cor-primaria);
+        color: var(--texto-principal);
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          var(--cor-secundaria) 0%,
+          var(--cor-primaria) 100%
+        );
+        opacity: 0.8;
+        z-index: 1;
+      }
+
+      .header > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 0 0 10px 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin: 0;
+      }
+
+      .section {
+        padding: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--background-escuro);
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      .section p {
+        color: var(--texto-secundario);
+        line-height: 1.6;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--cor-secundaria);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .demo-container {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px dashed var(--cor-secundaria);
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .demo-container::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -1px;
+        left: 20px;
+        background: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        padding: 4px 12px;
+        border-radius: 0 0 8px 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .visual-box {
+        background: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+        box-shadow: 0 4px 12px rgba(24, 188, 156, 0.3);
+      }
+
+      .container-fluid-demo {
+        background: linear-gradient(
+          135deg,
+          var(--cor-primaria) 0%,
+          var(--background-escuro) 100%
+        );
+        color: var(--cor-secundaria);
+      }
+
+      .container-sm-demo {
+        background: linear-gradient(
+          135deg,
+          var(--cor-secundaria) 0%,
+          var(--texto-houver) 100%
+        );
+        color: var(--cor-primaria);
+      }
+
+      .container-md-demo {
+        background: linear-gradient(
+          135deg,
+          var(--background-escuro) 0%,
+          var(--cor-primaria) 100%
+        );
+        color: var(--cor-secundaria);
+      }
+
+      .container-lg-demo {
+        background: linear-gradient(
+          135deg,
+          var(--texto-houver) 0%,
+          var(--cor-secundaria) 100%
+        );
+        color: var(--cor-primaria);
+      }
+
+      .container-xl-demo {
+        background: linear-gradient(
+          135deg,
+          var(--cor-primaria) 0%,
+          var(--texto-houver) 100%
+        );
+        color: var(--texto-principal);
+      }
+
+      .container-xxl-demo {
+        background: linear-gradient(
+          135deg,
+          var(--cor-secundaria) 0%,
+          var(--cor-primaria) 100%
+        );
+        color: var(--texto-principal);
+      }
+
+      .responsive-demo {
+        background: var(--background-escuro);
+        color: var(--texto-principal);
+        padding: 30px;
+        border-radius: 12px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .breakpoint-indicator {
+        display: inline-block;
+        padding: 8px 16px;
+        background: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .breakpoint-indicator:hover {
+        background: var(--texto-houver);
+        transform: translateY(-2px);
+      }
+
+      .code-snippet {
+        background: var(--background-escuro);
+        color: var(--texto-secundario);
+        padding: 20px;
+        border-radius: 8px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.9rem;
+        overflow-x: auto;
+        margin: 15px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .highlight {
+        color: var(--cor-secundaria);
+      }
+
+      .tag {
+        color: var(--texto-houver);
+      }
+
+      .attribute {
+        color: var(--texto-principal);
+      }
+
+      .comparison-table {
+        background: var(--background-escuro);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .comparison-table th {
+        background: var(--cor-primaria);
+        color: var(--texto-principal);
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--texto-secundario);
+      }
+
+      .comparison-table td code {
+        background: rgba(24, 188, 156, 0.2);
+        color: var(--cor-secundaria);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+
+      .comparison-table tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .tip-box {
+        background: rgba(24, 188, 156, 0.1);
+        border-left: 4px solid var(--cor-secundaria);
+        padding: 20px;
+        border-radius: 0 8px 8px 0;
+        margin: 20px 0;
+      }
+
+      .tip-box h4 {
+        color: var(--cor-secundaria);
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .tip-box p,
+      .tip-box ul {
+        color: var(--texto-secundario);
+      }
+
+      .interactive-demo {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 30px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-demo {
+        background: var(--cor-primaria);
+        border: none;
+        color: var(--texto-principal);
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        margin: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-demo:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+        background: var(--texto-houver);
+      }
+
+      .btn-demo.active {
+        background: var(--cor-secundaria);
+        color: var(--cor-primaria);
+      }
+
+      .demo-viewport {
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 20px 0;
+        background: var(--background-escuro);
+        transition: all 0.3s ease;
+      }
+
+      .current-size {
+        background: rgba(24, 188, 156, 0.2);
+        color: var(--cor-secundaria);
+        padding: 10px;
+        text-align: center;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .animation-container {
+        height: 300px;
+        overflow: hidden;
+        border-radius: 12px;
+        background: var(--background-escuro);
+        position: relative;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .flowing-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(
+          45deg,
+          var(--cor-secundaria),
+          var(--texto-houver),
+          var(--cor-primaria),
+          var(--cor-secundaria)
+        );
+        background-size: 400% 400%;
+        animation: gradient 3s ease infinite;
+        border-radius: 8px;
+        color: var(--texto-principal);
+        padding: 20px 40px;
+        font-weight: 600;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .nested-demo {
+        padding: 15px;
+        background: rgba(24, 188, 156, 0.1);
+        border: 1px solid var(--cor-secundaria);
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .section {
+          padding: 20px;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+
+      /* Estilos específicos para tip-box de erro */
+      .tip-box.error {
+        background: rgba(220, 38, 38, 0.1);
+        border-left-color: #dc2626;
+      }
+
+      .tip-box.error h4 {
+        color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1>
+          <a style="color: #fff" href="../html/home.html">Aprendizado Front</a>
+        </h1>
+      </div>
+    </header>
+    <div class="main-container">
+      <!-- Header -->
+      <div class="header">
+        <h1><i class="fas fa-cube"></i> Containers no Bootstrap</h1>
+        <p>Guia completo com exemplos visuais e interativos</p>
+      </div>
+
+      <!-- Introdução -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i> O que são Containers?
+        </h2>
+        <p>
+          Os containers são a <strong>base fundamental</strong> do sistema de
+          layout do Bootstrap. Eles envolvem e centralizam o conteúdo da sua
+          página, fornecendo margens responsivas e controle de largura.
+        </p>
+
+        <div class="animation-container">
+          <div class="flowing-container">
+            Container = Envolvedor Inteligente
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <h4><i class="fas fa-info-circle"></i> Por que usar Containers?</h4>
+          <p>
+            Containers garantem que seu conteúdo seja exibido corretamente em
+            todas as telas, desde celulares até monitores ultrawide, mantendo
+            margens apropriadas e larguras otimizadas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tipos de Containers -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-layer-group"></i> Tipos de Containers
+        </h2>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Classe</th>
+                <th>Comportamento</th>
+                <th>Largura Máxima</th>
+                <th>Uso Recomendado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.container</code></td>
+                <td>Responsivo com breakpoints</td>
+                <td>Varia por dispositivo</td>
+                <td>Layouts padrão</td>
+              </tr>
+              <tr>
+                <td><code>.container-fluid</code></td>
+                <td>100% da largura sempre</td>
+                <td>Sem limite</td>
+                <td>Layouts full-width</td>
+              </tr>
+              <tr>
+                <td><code>.container-sm</code></td>
+                <td>Fluido até SM (576px)</td>
+                <td>540px+</td>
+                <td>Mobile-first</td>
+              </tr>
+              <tr>
+                <td><code>.container-md</code></td>
+                <td>Fluido até MD (768px)</td>
+                <td>720px+</td>
+                <td>Tablets+</td>
+              </tr>
+              <tr>
+                <td><code>.container-lg</code></td>
+                <td>Fluido até LG (992px)</td>
+                <td>960px+</td>
+                <td>Desktops+</td>
+              </tr>
+              <tr>
+                <td><code>.container-xl</code></td>
+                <td>Fluido até XL (1200px)</td>
+                <td>1140px+</td>
+                <td>Monitores grandes+</td>
+              </tr>
+              <tr>
+                <td><code>.container-xxl</code></td>
+                <td>Fluido até XXL (1400px)</td>
+                <td>1320px+</td>
+                <td>Monitores muito grandes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Container Padrão -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-square"></i> .container (Padrão)
+        </h2>
+        <p>
+          O container padrão se adapta automaticamente ao tamanho da tela, com
+          larguras fixas em cada breakpoint:
+        </p>
+
+        <div class="demo-container" data-label=".container">
+          <div class="container">
+            <div class="visual-box">
+              Eu sou um .container padrão!<br />
+              <small>Minha largura muda conforme o tamanho da tela</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-snippet">
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"container"</span
+          ><span class="tag">&gt;</span>
+          <span class="tag">&lt;p&gt;</span>Conteúdo centralizado e
+          responsivo<span class="tag">&lt;/p&gt;</span>
+          <span class="tag">&lt;/div&gt;</span>
+        </div>
+
+        <div class="responsive-demo">
+          <h4>📱 Larguras por Dispositivo:</h4>
+          <div>
+            <span class="breakpoint-indicator">XS (&lt;576px): 100%</span>
+            <span class="breakpoint-indicator">SM (≥576px): 540px</span>
+            <span class="breakpoint-indicator">MD (≥768px): 720px</span>
+            <span class="breakpoint-indicator">LG (≥992px): 960px</span>
+            <span class="breakpoint-indicator">XL (≥1200px): 1140px</span>
+            <span class="breakpoint-indicator">XXL (≥1400px): 1320px</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container Fluid -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-expand-arrows-alt"></i> .container-fluid
+        </h2>
+        <p>
+          O container fluido sempre ocupa 100% da largura disponível, sem
+          limites:
+        </p>
+
+        <div class="demo-container" data-label=".container-fluid">
+          <div class="container-fluid">
+            <div class="visual-box container-fluid-demo">
+              Eu sou um .container-fluid!<br />
+              <small>Sempre ocupo 100% da largura da tela 📏</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-snippet">
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"container-fluid"</span
+          ><span class="tag">&gt;</span>
+          <span class="tag">&lt;p&gt;</span>Conteúdo que ocupa toda a
+          largura<span class="tag">&lt;/p&gt;</span>
+          <span class="tag">&lt;/div&gt;</span>
+        </div>
+
+        <div class="tip-box">
+          <h4>
+            <i class="fas fa-lightbulb"></i> Quando usar .container-fluid?
+          </h4>
+          <p>
+            Ideal para dashboards, galerias de imagens, mapas, ou qualquer
+            layout que precisa aproveitar todo o espaço horizontal disponível.
+          </p>
+        </div>
+      </div>
+
+      <!-- Containers com Breakpoints -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-mobile-alt"></i> Containers com Breakpoints
+        </h2>
+        <p>
+          Estes containers são fluidos (100%) até atingirem seu breakpoint
+          específico:
+        </p>
+
+        <div class="demo-container" data-label=".container-sm">
+          <div class="container-sm">
+            <div class="visual-box container-sm-demo">
+              .container-sm<br />
+              <small>Fluido até 576px, depois fixo em 540px</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-container" data-label=".container-md">
+          <div class="container-md">
+            <div class="visual-box container-md-demo">
+              .container-md<br />
+              <small>Fluido até 768px, depois responsivo</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-container" data-label=".container-lg">
+          <div class="container-lg">
+            <div class="visual-box container-lg-demo">
+              .container-lg<br />
+              <small>Fluido até 992px, depois responsivo</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-container" data-label=".container-xl">
+          <div class="container-xl">
+            <div class="visual-box container-xl-demo">
+              .container-xl<br />
+              <small>Fluido até 1200px, depois responsivo</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-container" data-label=".container-xxl">
+          <div class="container-xxl">
+            <div class="visual-box container-xxl-demo">
+              .container-xxl<br />
+              <small>Fluido até 1400px, depois responsivo</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Interativo -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-play-circle"></i> Demo Interativo
+        </h2>
+        <p>Teste diferentes containers clicando nos botões abaixo:</p>
+
+        <div class="interactive-demo">
+          <div style="text-align: center; margin-bottom: 20px">
+            <button
+              class="btn-demo active"
+              onclick="showContainer('container')"
+            >
+              container
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-fluid')">
+              container-fluid
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-sm')">
+              container-sm
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-md')">
+              container-md
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-lg')">
+              container-lg
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-xl')">
+              container-xl
+            </button>
+            <button class="btn-demo" onclick="showContainer('container-xxl')">
+              container-xxl
+            </button>
+          </div>
+
+          <div class="demo-viewport" id="demo-viewport">
+            <div class="current-size" id="current-size">Usando: .container</div>
+            <div id="demo-container" class="container">
+              <div class="visual-box" id="demo-content">
+                <strong>Container Ativo: .container</strong><br />
+                <small
+                  >Redimensione a janela para ver o comportamento
+                  responsivo!</small
+                ><br />
+                <span id="current-width"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Containers Aninhados -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-layer-group"></i> Containers Aninhados
+        </h2>
+        <p>Você pode aninhar containers, mas geralmente não é necessário:</p>
+
+        <div class="demo-container" data-label="Containers Aninhados">
+          <div class="container">
+            <div class="visual-box">
+              Container Externo (.container)
+              <div class="nested-demo">
+                <div class="container-fluid">
+                  <div
+                    class="visual-box container-fluid-demo"
+                    style="margin: 0"
+                  >
+                    Container Interno (.container-fluid)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <h4>
+            <i class="fas fa-exclamation-triangle"></i> Atenção com Containers
+            Aninhados
+          </h4>
+          <p>
+            Na maioria dos casos, você precisa de apenas UM container por
+            página. Evite aninhar containers desnecessariamente para não afetar
+            o layout responsivo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dicas e Boas Práticas -->
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-star"></i> Dicas e Boas Práticas
+        </h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tip-box">
+              <h4><i class="fas fa-check-circle"></i> ✅ Faça</h4>
+              <ul>
+                <li>Use um container como wrapper principal</li>
+                <li>Escolha o tipo baseado no seu design</li>
+                <li>Teste em diferentes tamanhos de tela</li>
+                <li>Use .container para layouts padrão</li>
+                <li>Use .container-fluid para dashboards</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tip-box error">
+              <h4><i class="fas fa-times-circle"></i> ❌ Evite</h4>
+              <ul>
+                <li>Múltiplos containers aninhados</li>
+                <li>Containers dentro de elementos row</li>
+                <li>Misturar containers sem necessidade</li>
+                <li>Esquecer de testar responsividade</li>
+                <li>Usar largura fixa quando não precisa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-snippet">
+          <span class="highlight">/* Estrutura HTML típica */</span>
+          <span class="tag">&lt;body&gt;</span>
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"container"</span
+          ><span class="tag">&gt;</span>
+          <span class="tag">&lt;header&gt;</span>...<span class="tag"
+            >&lt;/header&gt;</span
+          >
+          <span class="tag">&lt;main&gt;</span>
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"row"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"col-md-8"</span
+          ><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+          <span class="tag">&lt;div</span> <span class="attribute">class=</span
+          ><span class="highlight">"col-md-4"</span
+          ><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+          <span class="tag">&lt;/div&gt;</span>
+          <span class="tag">&lt;/main&gt;</span>
+          <span class="tag">&lt;footer&gt;</span>...<span class="tag"
+            >&lt;/footer&gt;</span
+          >
+          <span class="tag">&lt;/div&gt;</span>
+          <span class="tag">&lt;/body&gt;</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showContainer(containerType) {
+        // Remove active class from all buttons
+        document.querySelectorAll(".btn-demo").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+
+        // Update demo container
+        const demoContainer = document.getElementById("demo-container");
+        const currentSize = document.getElementById("current-size");
+        const demoContent = document.getElementById("demo-content");
+
+        // Remove all container classes
+        demoContainer.className = containerType;
+
+        // Update text
+        currentSize.textContent = `Usando: .${containerType}`;
+        demoContent.innerHTML = `
+                <strong>Container Ativo: .${containerType}</strong><br>
+                <small>Redimensione a janela para ver o comportamento responsivo!</small><br>
+                <span id="current-width"></span>
+            `;
+
+        updateWidth();
+      }
+
+      function updateWidth() {
+        const demoContainer = document.getElementById("demo-container");
+        const currentWidthSpan = document.getElementById("current-width");
+
+        if (currentWidthSpan && demoContainer) {
+          const width = demoContainer.offsetWidth;
+          const windowWidth = window.innerWidth;
+          currentWidthSpan.textContent = `Largura atual: ${width}px (janela: ${windowWidth}px)`;
+        }
+      }
+
+      // Update width on resize
+      window.addEventListener("resize", updateWidth);
+
+      // Initial width update
+      document.addEventListener("DOMContentLoaded", updateWidth);
+
+      // Update width periodically for smooth updates
+      setInterval(updateWidth, 500);
+    </script>
+  </body>
+</html>

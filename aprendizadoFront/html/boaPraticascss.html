@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/paginasBoaPratica.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <title>Boas Práticas CSS</title>
+  </head>
+  <body>
+    <header>
+      <div class="title-header">
+        <h1><a href="../html/home.html">Aprendizado Front</a></h1>
+      </div>
+    </header>
+    <main>
+      <section class="card-list">
+        <div class="card">
+          <div class="header-card">Nomes de classes</div>
+          <div class="body-card">
+            Use letras minúsculas e <strong>kebab-case</strong> (palavras com
+            hífen).<br />
+            Ex: <code>.menu-principal</code>, <code>.btn-verde</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">IDs</div>
+          <div class="body-card">
+            Use apenas para identificadores únicos. Evite usar IDs para
+            estilizar, prefira classes.<br />
+            Ex: <code>#formPrincipal</code>, <code>#btnEnviar</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Organização do CSS</div>
+          <div class="body-card">
+            Agrupe estilos por componentes ou blocos.<br />
+            Ex: <code>.card</code>, <code>.card-header</code>,
+            <code>.btn</code>, <code>.btn-primary</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Evite usar !important</div>
+          <div class="body-card">
+            Use somente em último caso. Dificulta manutenção e sobrescrita de
+            estilos.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Separar CSS, HTML e JS</div>
+          <div class="body-card">
+            Prefira usar arquivos <code>.css</code> externos para facilitar a
+            manutenção e organização do código.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Comentários claros</div>
+          <div class="body-card">
+            Utilize comentários para explicar blocos de código complexos.<br />
+            Ex: <code>/* Estilo do botão principal */</code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Consistência</div>
+          <div class="body-card">
+            Mantenha indentação padronizada (2 ou 4 espaços).<br />
+            Escolha um estilo e siga-o por todo o projeto.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="header-card">Acessibilidade</div>
+          <div class="body-card">
+            Use <code>alt</code> descritivo em imagens e garanta bom contraste
+            de texto para facilitar leitura.
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy; todos os direitos a Marcos Paulo B. de Medeiros</span>
+    </footer>
+  </body>
+</html>

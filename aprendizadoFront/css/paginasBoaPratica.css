@@ -1,0 +1,29 @@
+.card-list {
+  margin-top: 20px;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
+  background-color: var(--background-escuro);
+  border-radius: 20px;
+}
+
+.card {
+  min-width: none;
+  height: auto;
+  min-height: 120px;
+  border: solid var(--cor-secundaria);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.body-card {
+  padding: 1px;
+}
+
+main {
+  overflow-y: auto;
+}

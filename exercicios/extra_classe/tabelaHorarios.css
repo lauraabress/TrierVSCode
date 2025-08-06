@@ -1,0 +1,32 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td, th {
+    padding: 10px;
+    padding-inline: 50px;
+    border-bottom: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+}
+
+td:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
